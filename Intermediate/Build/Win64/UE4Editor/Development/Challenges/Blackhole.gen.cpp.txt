@@ -1,5 +1,0 @@
-F:\UE4\TomLoomanStarter\Intermediate\Build\Win64\UE4Editor\Development\Challenges\Definitions.Challenges.h
-F:\Programs\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-F:\Programs\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-F:\UE4\TomLoomanStarter\Source\Challenges/Private/Blackhole.h
-F:\UE4\TomLoomanStarter\Intermediate\Build\Win64\UE4Editor\Inc\Challenges\Blackhole.generated.h
