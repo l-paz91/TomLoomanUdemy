@@ -19,10 +19,10 @@ class ATomLoomanStarterGameMode : public AGameModeBase
 public:
 	ATomLoomanStarterGameMode();
 
-	void CompleteMission(AActor* InActor);
+	void CompleteMission(AActor* InActor, bool InMissionSuccess);
 
 	UFUNCTION(BlueprintImplementableEvent, Category="GameMode")
-	void OnMissionComplete(AActor* InActor);
+	void OnMissionComplete(AActor* InActor, bool InMissionSuccess);
 
 	UPROPERTY(EditDefaultsOnly, Category="Spectating")
 	TSubclassOf<AActor> mSpectatingViewpoint;
