@@ -23,7 +23,7 @@ ATomLoomanStarterGameMode::ATomLoomanStarterGameMode()
 
 // -----------------------------------------------------------------------------
 
-void ATomLoomanStarterGameMode::CompleteMission(AActor* InActor)
+void ATomLoomanStarterGameMode::CompleteMission(AActor* InActor, bool InMissionSuccess)
 {
 	if (APawn* Character = Cast<APawn>(InActor))
 	{
@@ -43,7 +43,7 @@ void ATomLoomanStarterGameMode::CompleteMission(AActor* InActor)
 		}
 	}
 
-	OnMissionComplete(InActor);
+	OnMissionComplete(InActor, InMissionSuccess);
 }
 
 // -----------------------------------------------------------------------------
