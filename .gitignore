@@ -371,9 +371,10 @@ FodyWeavers.xsd
 # Allow folders and their contents
 !*/
 
-# Ignore all folders except Source
+# Ignore all folders except Source, Config Files
 /**/*
 !Source/**/*
+!Config/**/*
 
 # Include Visual Studio solution (.sln) and Unreal Engine project (.uproject) files
 !*.sln
