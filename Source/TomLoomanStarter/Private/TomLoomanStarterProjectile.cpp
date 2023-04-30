@@ -54,9 +54,10 @@ void ATomLoomanStarterProjectile::OnHit(
 
 		// play an explosion effect
 		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), mExplosionEffect, GetActorLocation());
-		Destroy();
 	}
 
+	MakeNoise(1.0, GetInstigator());
+	Destroy();
 }
 
 // -----------------------------------------------------------------------------
