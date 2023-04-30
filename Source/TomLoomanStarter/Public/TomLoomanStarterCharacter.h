@@ -16,6 +16,7 @@ class USceneComponent;
 class UCameraComponent;
 class UAnimMontage;
 class USoundBase;
+class UPawnNoiseEmitterComponent;
 
 // -----------------------------------------------------------------------------
 
@@ -107,6 +108,9 @@ protected:
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FirstPersonCameraComponent;
+
+	UPROPERTY(VisibleAnywhere, Category="Components")
+	UPawnNoiseEmitterComponent* mNoiseEmitterComp;
 };
 
 // -----------------------------------------------------------------------------
