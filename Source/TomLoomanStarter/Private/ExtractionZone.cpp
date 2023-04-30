@@ -52,7 +52,7 @@ void AExtractionZone::HandleOverlap(
 			{
 				if (ATomLoomanStarterGameMode* Gamemode = Cast<ATomLoomanStarterGameMode>(World->GetAuthGameMode()))
 				{
-					Gamemode->CompleteMission(Character);
+					Gamemode->CompleteMission(Character, true);
 				}
 			}
 		}
