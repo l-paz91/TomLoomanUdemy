@@ -1,7 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "TomLoomanStarterCharacter.h"
-#include "TomLoomanStarterProjectile.h"
+
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -9,6 +9,9 @@
 #include "GameFramework/InputSettings.h"
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "Kismet/GameplayStatics.h"
+#include <Runtime\Engine\Classes\Components\PawnNoiseEmitterComponent.h>
+
+#include "TomLoomanStarterProjectile.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -27,6 +30,7 @@ ATomLoomanStarterCharacter::ATomLoomanStarterCharacter()
 	, FP_Gun(CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FP_Gun")))
 	, FP_MuzzleLocation(CreateDefaultSubobject<USceneComponent>(TEXT("MuzzleLocation")))
 	, FirstPersonCameraComponent(CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera")))
+	, mNoiseEmitterComp(CreateDefaultSubobject<UPawnNoiseEmitterComponent>(TEXT("NoiseEmitterComp")))
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
@@ -120,6 +124,7 @@ void ATomLoomanStarterCharacter::OnFire()
 			//Set Spawn Collision Handling Override
 			FActorSpawnParameters ActorSpawnParams;
 			ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
+			ActorSpawnParams.Instigator = this;
 
 			// spawn the projectile at the muzzle
 			World->SpawnActor<ATomLoomanStarterProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
