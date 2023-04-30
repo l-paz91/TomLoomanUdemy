@@ -1,0 +1,11 @@
+{
+	"SourceFiles": [
+		"F:\\UE4\\TomLoomanStarter\\Source\\Challenges\\Challenges.Build.cs",
+		"F:\\UE4\\TomLoomanStarter\\Source\\ObjectiveActor\\ObjectiveActor.Build.cs",
+		"F:\\UE4\\TomLoomanStarter\\Source\\StealthGame\\StealthGame.Build.cs",
+		"F:\\UE4\\TomLoomanStarter\\Source\\TomLoomanStarter\\TomLoomanStarter.Build.cs",
+		"F:\\UE4\\TomLoomanStarter\\Source\\TomLoomanStarter.Target.cs",
+		"F:\\UE4\\TomLoomanStarter\\Source\\TomLoomanStarterEditor.Target.cs"
+	],
+	"EngineVersion": "4.26.2"
+}

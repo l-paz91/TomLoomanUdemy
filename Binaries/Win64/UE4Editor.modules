@@ -1,0 +1,10 @@
+{
+	"BuildId": "14830424",
+	"Modules": 
+	{
+		"Challenges": "UE4Editor-Challenges-0013.dll",
+		"ObjectiveActor": "UE4Editor-ObjectiveActor-0013.dll",
+		"StealthGame": "UE4Editor-StealthGame-0013.dll",
+		"TomLoomanStarter": "UE4Editor-TomLoomanStarter-0013.dll"
+	}
+}

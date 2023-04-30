@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-ObjectiveActor-0012.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"F:\UE4\TomLoomanStarter\Intermediate\Build\Win64\TomLoomanStarterEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"F:\UE4\TomLoomanStarter\Intermediate\Build\Win64\UE4Editor\Development\ObjectiveActor\ObjectiveActorModule.cpp.obj"
+"F:\UE4\TomLoomanStarter\Intermediate\Build\Win64\UE4Editor\Development\ObjectiveActor\ObjectiveActor.cpp.obj"
+"F:\UE4\TomLoomanStarter\Intermediate\Build\Win64\UE4Editor\Development\ObjectiveActor\ObjectiveActor.gen.cpp.obj"
+"F:\UE4\TomLoomanStarter\Intermediate\Build\Win64\UE4Editor\Development\ObjectiveActor\ObjectiveActor.init.gen.cpp.obj"
+"F:\UE4\TomLoomanStarter\Intermediate\Build\Win64\UE4Editor\Development\ObjectiveActor\Default.rc2.res"
+/OUT:"F:\UE4\TomLoomanStarter\Intermediate\Build\Win64\UE4Editor\Development\ObjectiveActor\UE4Editor-ObjectiveActor-0012.lib"
+/INCLUDE:IMPLEMENT_MODULE_ObjectiveActor

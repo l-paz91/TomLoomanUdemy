@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\TomLoomanStarter.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{DDCDC050-E57C-4733-833A-52E547094A92}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TomLoomanStarter.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\TomLoomanStarterEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\ParticleToolkitVol1.png" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{C1506DFE-C6B5-44C2-9292-0AFA3FD28203}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Challenges">
+      <UniqueIdentifier>{050AB30D-694A-4B3F-B614-14D9FE13BAF1}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Challenges\Challenges.Build.cs">
+      <Filter>Source\Challenges</Filter>
+    </None>
+    <Filter Include="Source\Challenges\Private">
+      <UniqueIdentifier>{9EB43C3E-2D77-46A9-90F0-2D1F51BEC717}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Challenges\Private\Blackhole.h">
+      <Filter>Source\Challenges\Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Challenges\Private\ChallengesModule.cpp">
+      <Filter>Source\Challenges\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\Challenges\Public">
+      <UniqueIdentifier>{BE0AAB36-09C4-4C49-86D7-35783A730DF3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Challenges\Public\Blackhole.cpp">
+      <Filter>Source\Challenges\Public</Filter>
+    </ClCompile>
+    <Filter Include="Source\ObjectiveActor">
+      <UniqueIdentifier>{7328C4B2-2D57-458E-BD81-A659CAEC1E7A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ObjectiveActor\ObjectiveActor.Build.cs">
+      <Filter>Source\ObjectiveActor</Filter>
+    </None>
+    <Filter Include="Source\ObjectiveActor\Private">
+      <UniqueIdentifier>{37A2E2DD-8FD6-43B8-844F-4428796109B6}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ObjectiveActor\Private\ObjectiveActor.h">
+      <Filter>Source\ObjectiveActor\Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ObjectiveActor\Private\ObjectiveActorModule.cpp">
+      <Filter>Source\ObjectiveActor\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\ObjectiveActor\Public">
+      <UniqueIdentifier>{DA084D6B-E572-4EC6-9BDF-73C79283BA16}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ObjectiveActor\Public\ObjectiveActor.cpp">
+      <Filter>Source\ObjectiveActor\Public</Filter>
+    </ClCompile>
+    <Filter Include="Source\StealthGame">
+      <UniqueIdentifier>{6F02BD60-FB60-4F2D-89AF-4C4F85392679}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\StealthGame\StealthGame.Build.cs">
+      <Filter>Source\StealthGame</Filter>
+    </None>
+    <Filter Include="Source\StealthGame\Private">
+      <UniqueIdentifier>{CE889EB4-5CC7-4FC8-84BA-57DE363D22B6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StealthGame\Private\StealthGameModule.cpp">
+      <Filter>Source\StealthGame\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\TomLoomanStarter">
+      <UniqueIdentifier>{DBA3F131-150B-45EE-84DB-83AC9F40087A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TomLoomanStarter\TomLoomanStarter.Build.cs">
+      <Filter>Source\TomLoomanStarter</Filter>
+    </None>
+    <Filter Include="Source\TomLoomanStarter\Private">
+      <UniqueIdentifier>{71F1D790-1ED2-4AC4-8D77-152788737157}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TomLoomanStarter\Private\ExtractionZone.cpp">
+      <Filter>Source\TomLoomanStarter\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TomLoomanStarter\Private\Launchpad.cpp">
+      <Filter>Source\TomLoomanStarter\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TomLoomanStarter\Private\TomLoomanStarter.cpp">
+      <Filter>Source\TomLoomanStarter\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TomLoomanStarter\Private\TomLoomanStarterCharacter.cpp">
+      <Filter>Source\TomLoomanStarter\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TomLoomanStarter\Private\TomLoomanStarterGameMode.cpp">
+      <Filter>Source\TomLoomanStarter\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TomLoomanStarter\Private\TomLoomanStarterHUD.cpp">
+      <Filter>Source\TomLoomanStarter\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TomLoomanStarter\Private\TomLoomanStarterProjectile.cpp">
+      <Filter>Source\TomLoomanStarter\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\TomLoomanStarter\Public">
+      <UniqueIdentifier>{4901BAE6-891B-4296-9C11-420B31015259}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\TomLoomanStarter\Public\ExtractionZone.h">
+      <Filter>Source\TomLoomanStarter\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TomLoomanStarter\Public\Launchpad.h">
+      <Filter>Source\TomLoomanStarter\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TomLoomanStarter\Public\TomLoomanStarter.h">
+      <Filter>Source\TomLoomanStarter\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TomLoomanStarter\Public\TomLoomanStarterCharacter.h">
+      <Filter>Source\TomLoomanStarter\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TomLoomanStarter\Public\TomLoomanStarterGameMode.h">
+      <Filter>Source\TomLoomanStarter\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TomLoomanStarter\Public\TomLoomanStarterHUD.h">
+      <Filter>Source\TomLoomanStarter\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TomLoomanStarter\Public\TomLoomanStarterProjectile.h">
+      <Filter>Source\TomLoomanStarter\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

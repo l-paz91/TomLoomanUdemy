@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "TomLoomanStarter",
+			"Path": "F:\\UE4\\TomLoomanStarter\\Source\\TomLoomanStarter.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "TomLoomanStarterEditor",
+			"Path": "F:\\UE4\\TomLoomanStarter\\Source\\TomLoomanStarterEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
