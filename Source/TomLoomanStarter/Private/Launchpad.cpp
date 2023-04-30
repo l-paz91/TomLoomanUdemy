@@ -2,32 +2,60 @@
 
 #include "Launchpad.h"
 
+#include <Runtime\Engine\Classes\Components\ArrowComponent.h>
+#include <Runtime\Engine\Classes\Components\BoxComponent.h>
+#include <Runtime\Engine\Classes\Components\StaticMeshComponent.h>
+#include <Runtime\Engine\Classes\GameFramework\Character.h>
+#include <Runtime\Engine\Classes\Kismet\GameplayStatics.h>
+
 // -----------------------------------------------------------------------------
 
 // Sets default values
 ALaunchpad::ALaunchpad()
+	: mMeshComp(CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComp")))
+	, mOverlapComp(CreateDefaultSubobject<UBoxComponent>(TEXT("OverlapComp")))
+	, mActivateLaunchPadEffect()
+	, mLaunchStrength(1500.0f)
+	, mLaunchPitchAngle(35.0f)
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	RootComponent = mMeshComp;
+	mOverlapComp->SetupAttachment(RootComponent);
 
+	mOverlapComp->SetBoxExtent(FVector(75.f, 75.f, 50.f));
+	mOverlapComp->OnComponentBeginOverlap.AddDynamic(this, &ALaunchpad::OverlapLaunchPad);
 }
 
 // -----------------------------------------------------------------------------
 
-// Called when the game starts or when spawned
-void ALaunchpad::BeginPlay()
+void ALaunchpad::OverlapLaunchPad(
+	UPrimitiveComponent* OverlappedComponent, 
+	AActor* OtherActor, 
+	UPrimitiveComponent* OtherComp, 
+	int32 OtherBodyIndex, 
+	bool bFromSweep, 
+	const FHitResult& SweepResult)
 {
-	Super::BeginPlay();
-	
-}
+	// Make rotator with our specified 'pitch' and convert to a direction vector * intensity
+	FRotator LaunchDirection = GetActorRotation();
+	LaunchDirection.Pitch += mLaunchPitchAngle;
+	FVector LaunchVelocity = LaunchDirection.Vector() * mLaunchStrength;
 
-// -----------------------------------------------------------------------------
+	if (ACharacter* OtherCharacter = Cast<ACharacter>(OtherActor))
+	{
+		// Launch Player! Both booleans give consistent launch velocity by ignoring the current player velocity
+		OtherCharacter->LaunchCharacter(LaunchVelocity, true, true);
 
-// Called every frame
-void ALaunchpad::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
+		// Spawn FX
+		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), mActivateLaunchPadEffect, GetActorLocation());
+	}
+	else if (OtherComp && OtherComp->IsSimulatingPhysics())
+	{
+		// Did not overlap a player, so check if it's a physics simulating actor we can launch
+		OtherComp->AddImpulse(LaunchVelocity, NAME_None, true);
 
+		// Spawn FX
+		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), mActivateLaunchPadEffect, GetActorLocation());
+	}
 }
 
 // -----------------------------------------------------------------------------
