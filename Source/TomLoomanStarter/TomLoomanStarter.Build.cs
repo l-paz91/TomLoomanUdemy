@@ -12,6 +12,7 @@ public class TomLoomanStarter : ModuleRules
 
 		PrivateDependencyModuleNames.AddRange(new string[] 
 		{ 
+			"AIModule",
 			"Core", 
 			"CoreUObject", 
 			"Engine", 
