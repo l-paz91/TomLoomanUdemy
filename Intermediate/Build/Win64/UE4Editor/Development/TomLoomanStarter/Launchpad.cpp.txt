@@ -1,3 +1,0 @@
-F:\UE4\TomLoomanStarter\Intermediate\Build\Win64\UE4Editor\Development\TomLoomanStarter\Definitions.TomLoomanStarter.h
-F:\UE4\TomLoomanStarter\Source\TomLoomanStarter\Public\Launchpad.h
-F:\UE4\TomLoomanStarter\Intermediate\Build\Win64\UE4Editor\Inc\TomLoomanStarter\Launchpad.generated.h

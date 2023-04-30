@@ -1,2 +1,0 @@
-F:\UE4\TomLoomanStarter\Intermediate\Build\Win64\UE4Editor\Development\TomLoomanStarter\Definitions.TomLoomanStarter.h
-F:\UE4\TomLoomanStarter\Source\TomLoomanStarter\Public\TomLoomanStarter.h
