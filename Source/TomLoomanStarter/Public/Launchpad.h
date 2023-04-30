@@ -11,6 +11,12 @@
 
 // -----------------------------------------------------------------------------
 
+class UBoxComponent;
+class UStaticMeshComponent;
+class UArrowComponent;
+
+// -----------------------------------------------------------------------------
+
 UCLASS()
 class TOMLOOMANSTARTER_API ALaunchpad : public AActor
 {
@@ -20,14 +26,26 @@ public:
 	// Sets default values for this actor's properties
 	ALaunchpad();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	UFUNCTION()
+	void OverlapLaunchPad(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	UStaticMeshComponent* mMeshComp;
 
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	UBoxComponent* mOverlapComp;
+
+	UPROPERTY(EditDefaultsOnly, Category = "LaunchPad")
+	UParticleSystem* mActivateLaunchPadEffect;
+
+	// Total impulse added to the character on overlap
+	UPROPERTY(EditInstanceOnly, Category = "LaunchPad")
+	float mLaunchStrength;
+
+	// Angle added on top of actor rotation to launch the character.
+	UPROPERTY(EditInstanceOnly, Category = "LaunchPad")
+	float mLaunchPitchAngle;
 };
 
 // -----------------------------------------------------------------------------
