@@ -361,3 +361,20 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Ignore everything by default
+*
+
+# Do not ignore the .gitignore file
+!.gitignore
+
+# Allow folders and their contents
+!*/
+
+# Ignore all folders except Source
+/**/*
+!Source/**/*
+
+# Include Visual Studio solution (.sln) and Unreal Engine project (.uproject) files
+!*.sln
+!*.uproject
